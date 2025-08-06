@@ -14,6 +14,7 @@ namespace GerenciadorDeEstacionamento.Models
 
         public void AdicionarVeiculo()
         {
+            Console.Clear();
             Console.Write("Digite a placa do veículo para estacionar: ");
             var placaVeiculo = Console.ReadLine()?.Trim().ToUpper();
 
@@ -35,6 +36,7 @@ namespace GerenciadorDeEstacionamento.Models
 
         public void RemoverVeiculo()
         {
+            Console.Clear();
             Console.WriteLine("Digite a placa do veículo que deseja remover:");
             var placa = Console.ReadLine()?.Trim().ToUpper();
 
@@ -46,7 +48,7 @@ namespace GerenciadorDeEstacionamento.Models
          
             if (_veiculos.Any(x => string.Equals(x, placa, StringComparison.OrdinalIgnoreCase)))
             {
-                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+                Console.WriteLine("\nDigite a quantidade de horas que o veículo permaneceu estacionado:");
                 if (!int.TryParse(Console.ReadLine(), out var horas) || horas < 0)
                 {
                     Console.WriteLine("❌ Entrada inválida. Tente novamente.");
@@ -55,16 +57,17 @@ namespace GerenciadorDeEstacionamento.Models
                 
                 var valorTotal = _precoInicial + (_precoPorHora * horas);
                 _veiculos.Remove(placa);
-                Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal:F2}");
+                Console.WriteLine($"\nO veículo {placa} foi removido e o preço total foi de: R$ {valorTotal:F2}");
             }
             else
             {
-                Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
+                Console.WriteLine("\nDesculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
             }
         }
 
         public void ListarVeiculos()
         {
+            Console.Clear();
             if (_veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");

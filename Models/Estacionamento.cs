@@ -4,7 +4,7 @@ namespace GerenciadorDeEstacionamento.Models
     {
         private readonly decimal _precoInicial = 0;
         private readonly decimal _precoPorHora = 0;
-        private readonly List<string> _veiculos = new List<string>();
+        private readonly List<string> _veiculos = [];
 
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
@@ -44,7 +44,7 @@ namespace GerenciadorDeEstacionamento.Models
                 return;
             }
          
-            if (_veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
+            if (_veiculos.Any(x => string.Equals(x, placa, StringComparison.OrdinalIgnoreCase)))
             {
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
                 if (!int.TryParse(Console.ReadLine(), out var horas) || horas < 0)

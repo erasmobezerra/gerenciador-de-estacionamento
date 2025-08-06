@@ -2,20 +2,20 @@ namespace GerenciadorDeEstacionamento.Models
 {
     public class Estacionamento
     {
-        private decimal precoInicial = 0;
-        private decimal precoPorHora = 0;
-        private List<string> veiculos = new List<string>();
+        private readonly decimal _precoInicial = 0;
+        private readonly decimal _precoPorHora = 0;
+        private readonly List<string> _veiculos = new List<string>();
 
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
-            this.precoInicial = precoInicial;
-            this.precoPorHora = precoPorHora;
+            this._precoInicial = precoInicial;
+            this._precoPorHora = precoPorHora;
         }
 
         public void AdicionarVeiculo()
         {
             Console.Write("Digite a placa do veículo para estacionar: ");
-            string? placaVeiculo = Console.ReadLine()?.Trim().ToUpper();
+            var placaVeiculo = Console.ReadLine()?.Trim().ToUpper();
 
             if (string.IsNullOrWhiteSpace(placaVeiculo))
             {
@@ -23,20 +23,20 @@ namespace GerenciadorDeEstacionamento.Models
                 return;
             }
 
-            if (veiculos.Contains(placaVeiculo))
+            if (_veiculos.Contains(placaVeiculo))
             {
                 Console.WriteLine("⚠️ Este veículo já está estacionado.");
                 return;
             }
 
-            veiculos.Add(placaVeiculo);
+            _veiculos.Add(placaVeiculo);
             Console.WriteLine("✅ Veículo estacionado com sucesso!");
         }
 
         public void RemoverVeiculo()
         {
             Console.WriteLine("Digite a placa do veículo que deseja remover:");
-            string? placa = Console.ReadLine()?.Trim().ToUpper();
+            var placa = Console.ReadLine()?.Trim().ToUpper();
 
             if (string.IsNullOrWhiteSpace(placa))
             {
@@ -44,17 +44,17 @@ namespace GerenciadorDeEstacionamento.Models
                 return;
             }
          
-            if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
+            if (_veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
             {
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
-                if (!int.TryParse(Console.ReadLine(), out int horas) || horas < 0)
+                if (!int.TryParse(Console.ReadLine(), out var horas) || horas < 0)
                 {
                     Console.WriteLine("❌ Entrada inválida. Tente novamente.");
                     return;
                 }
                 
-                decimal valorTotal = precoInicial + (precoPorHora * horas);
-                veiculos.Remove(placa);
+                var valorTotal = _precoInicial + (_precoPorHora * horas);
+                _veiculos.Remove(placa);
                 Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal:F2}");
             }
             else
@@ -65,10 +65,10 @@ namespace GerenciadorDeEstacionamento.Models
 
         public void ListarVeiculos()
         {
-            if (veiculos.Any())
+            if (_veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                foreach (string veiculo in veiculos)
+                foreach (var veiculo in _veiculos)
                     Console.WriteLine("- " + veiculo);
             }
             else

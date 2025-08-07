@@ -21,7 +21,7 @@ DesafioFundamentos/
 ├── Program.cs
 └── README.md
 ```
-## Tecnologias Empregadas
+## 🛠️ Tecnologias Utilizadas
 
   <img alt="C#" src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white&style=for-the-badge" />
   <img alt=".NET" src="https://img.shields.io/badge/.NET-5C2D91?logo=.net&logoColor=white&style=for-the-badge" /> 
@@ -62,25 +62,6 @@ cd .\gerenciador-de-estacionamento\
 # 3. Execute o projeto
 dotnet run
 ```
-
-
-
-## 🧪 Exemplo de Uso
-
-```csharp
-// Criando uma instância do estacionamento
-var estacionamento = new Estacionamento(precoInicial: 5.00m, precoPorHora: 2.00m);
-
-// Adicionando veículos
-estacionamento.AdicionarVeiculo("ABC-1234");
-
-// Listando veículos
-estacionamento.ListarVeiculos();
-
-// Removendo veículo (será solicitado o tempo de permanência)
-estacionamento.RemoverVeiculo("ABC-1234");
-```
-
 ## 📬 Contato
 
 <div align="left">

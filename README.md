@@ -54,10 +54,10 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/erasmobezerra/trilha-net-fundamentos-desafio
+git clone https://github.com/erasmobezerra/gerenciador-de-estacionamento.git
 
 # 2. Navegue até a pasta do projeto
-cd trilha-net-fundamentos-desafio/trilha-net-fundamentos-desafio/DesafioFundamentos
+cd .\gerenciador-de-estacionamento\
 
 # 3. Execute o projeto
 dotnet run

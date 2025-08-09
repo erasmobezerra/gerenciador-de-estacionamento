@@ -2,6 +2,9 @@
 
 Esta aplicação foi desenvolvida como parte do 1º desafio de projeto do Bootcamp **Deal Group AI Centric .NET**. Agradeço profundamente à **Digital Innovation One** por proporcionar este aprendizado gratuito e de qualidade. Um reconhecimento especial ao professor **[Leonardo Buta](https://www.linkedin.com/in/leonardo-buta/)** pela excelente didática e orientação durante todo o processo.
 
+## 🚀 A prática leva à perfeição!
+Sabe aquele ditado: "A prática leva à perfeição"? E não vejo como melhor evoluir no aprendizado contínuo senão no desenvolvimento de desafios de projetos e claro, criando também um projeto pessoal! Mas isso não significa de jeito nenhum pular os fundamentos, pois é justamente com uma base sólida que conseguimos construir arranha-céus futuramente! ALiar o estudo teórico e prático no desenvolvimentos de aplicações é fundamento para nosso crescimento! E este Sistema de Gerenciamento de Estacionamento me ajudou muito a firmar mais os fundamentos de C#! 
+
 ## 📖 Sobre o Projeto
 
 Trata-se de um sistema de gestão de estacionamento que permite gerenciar os veículos estacionados. O objetivo principal proposto foi completar a implementação de três métodos: 

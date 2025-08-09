@@ -1,16 +1,15 @@
 # 🚗 Sistema de Gerenciamento de Estacionamento
 
+Esta aplicação foi desenvolvida como parte do 1º desafio de projeto do Bootcamp **Deal Group AI Centric .NET**. Agradeço profundamente à **Digital Innovation One** por proporcionar este aprendizado gratuito e de qualidade. Um reconhecimento especial ao professor **[Leonardo Buta](https://www.linkedin.com/in/leonardo-buta/)** pela excelente didática e orientação durante todo o processo.
+
 ## 📖 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte do desafio da **Trilha .NET - Fundamentos**. Trata-se de um sistema de gestão de estacionamento que permite gerenciar os veículos estacionados e realizar operações essenciais como:
+Trata-se de um sistema de gestão de estacionamento que permite gerenciar os veículos estacionados. O objetivo principal proposto foi completar a implementação de três métodos: 
 
-- ➕ Adicionar veículos
-- ➖ Remover veículos (com cálculo automático do valor)
-- 📋 Listar veículos estacionados
+- ➕ adicionarVeículos()
+- ➖ removerVeiculos()
+- 📋 listarVeiculos()
 
-## 🎯 Visão Geral
-
-O objetivo principal foi implementar três métodos fundamentais do sistema, aplicando boas práticas de programação e tratamento de erros para criar uma solução robusta e confiável.
 
 ## 💻 Estrutura do Projeto
 
@@ -23,11 +22,13 @@ DesafioFundamentos/
 ```
 ## 🛠️ Tecnologias Utilizadas
 
+<div>      
   <img alt="C#" src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white&style=for-the-badge" />
-  <img alt=".NET" src="https://img.shields.io/badge/.NET-5C2D91?logo=.net&logoColor=white&style=for-the-badge" /> 
+  <img alt=".NET" src="https://img.shields.io/badge/.NET-5C2D91?logo=.net&logoColor=white&style=for-the-badge" />  
+</div>  
+
 
 ## ⚙️ Funcionalidades Implementadas
-
 ### 🔧 Métodos Principais
 
 | Método | Descrição |
@@ -40,8 +41,7 @@ DesafioFundamentos/
 
 - **Tratamento de Erros**: Validação para entradas inválidas (placas vazias, horas negativas)
 - **Imutabilidade**: Atributos da classe declarados como `readonly`
-- **Boas Práticas**: Nomenclatura padronizada com prefixo "_" para atributos privados
-- **Código Limpo**: Nomes de variáveis mais descritivos e organização estrutural
+- **Boas Práticas**: Nomenclatura padronizada com prefixo "_" para atributos privados e nomes de variáveis mais descritivos
 
 ## 📋 Pré-requisitos
 
@@ -72,10 +72,6 @@ dotnet run
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erasmobezerra/)
 
 </div>
-
-## 🙏 Agradecimentos
-
-Agradeço profundamente à **Digital Innovation One** por proporcionar este aprendizado gratuito e de qualidade. Um reconhecimento especial ao professor **[Leonardo Buta](https://www.linkedin.com/in/leonardo-buta/)** pela excelente didática e orientação durante todo o processo.
 
 ---
 
